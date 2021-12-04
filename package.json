@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-api-client-sample",
+  "version": "1.0.0",
+  "description": "Sample nodejs client for the Everactive API",
+  "main": "index.js",
+  "scripts": {
+    "mhm-client": "node simple-mhm-client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everactive/nodejs-api-client-sample.git"
+  },
+  "keywords": [
+    "everactive",
+    "api",
+    "nodejs"
+  ],
+  "author": "Everactive",
+  "license": "0BSD",
+  "bugs": {
+    "url": "https://github.com/everactive/nodejs-api-client-sample/issues"
+  },
+  "homepage": "https://github.com/everactive/nodejs-api-client-sample#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "axios-oauth-client": "^1.4.4",
+    "axios-token-interceptor": "^0.2.0"
+  }
+}
