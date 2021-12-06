@@ -1,4 +1,5 @@
 # nodejs-api-client-sample
+
 Sample nodejs application that interacts with the Everactive API.
 
 ## Configuration
@@ -31,15 +32,16 @@ npm run mhm-client
 
 ## Runing with Docker
 
-In case you don't want to use a local nodejs engin, we have included a Dockerfile that will allow you to run the application inside a container.
+In case you don't want to use a local nodejs engine, a Dockerfile is included that runs the application inside a container.
 
 Build the image:
+
 ```
 docker build -t everactive-api .
 ```
 
 Run the application:
+
 ```
 docker run -ti --rm everactive-api npm run mhm-client
 ```
-

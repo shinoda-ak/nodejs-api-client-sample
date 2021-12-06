@@ -1,4 +1,9 @@
 FROM node:alpine
-COPY ./ ./
+
+COPY package.json ./
+
 RUN npm install
+
+COPY . .
+
 CMD ["run.sh"]
