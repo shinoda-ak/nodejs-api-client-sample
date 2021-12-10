@@ -41,8 +41,8 @@ exports.handler = async (event, content, callback) => {
     }
 
     const timeseriesList = await Promise.all(machines.map(async machine => {
-      const res = await apiClient.get(`/machines/${machine.id}/timeseries?startTime=${startTime}&endTime=${endTime}`);
-      if (res.status != 200) {
+      const res = await apiClient.get(`/machines/${machine.id}/timeseries?startTime=${startTime}&endTime=${endTime}`)
+      if (res.status !== 200) {
         return { id: machine.id, error: `status: ${res.status}` }
       }
       return { id: machine.id, resultSetInfo: res.data?.resultSetInfo, data: res.data?.data }
