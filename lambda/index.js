@@ -3,7 +3,7 @@ const axios = require('axios')
 const oauth = require('axios-oauth-client')
 const tokenProvider = require('axios-token-interceptor')
 
-exports.handler = async (event, content, callback) => {
+exports.handler = async (event, context, callback) => {
   axios.defaults.baseURL = process.env.BASE_URL
 
   try {
