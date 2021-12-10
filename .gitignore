@@ -1,2 +1,11 @@
 node_modules
 secrets.js
+
+# env
+.env
+
+# zip
+*.zip
+
+# misc
+.DS_Store

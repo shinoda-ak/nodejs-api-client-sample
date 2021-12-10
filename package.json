@@ -4,7 +4,9 @@
   "description": "Sample nodejs client for the Everactive API",
   "main": "index.js",
   "scripts": {
-    "mhm-client": "node simple-mhm-client.js"
+    "mhm-client": "node simple-mhm-client.js",
+    "zip": "npm-pack-zip",
+    "deploy": "aws lambda update-function-code --function-name everactive-nodejs-api-client-sample --zip-file fileb://nodejs-api-client-sample.zip"
   },
   "repository": {
     "type": "git",
@@ -25,5 +27,17 @@
     "axios": "^0.24.0",
     "axios-oauth-client": "^1.4.4",
     "axios-token-interceptor": "^0.2.0"
-  }
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "npm-pack-zip": "^1.2.9"
+  },
+  "files": [
+    "lambda"
+  ],
+  "bundledDependencies": [
+    "axios",
+    "axios-oauth-client",
+    "axios-token-interceptor"
+  ]
 }
